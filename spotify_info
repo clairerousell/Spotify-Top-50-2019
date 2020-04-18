@@ -4,3 +4,17 @@ spotify_info = list(csv.DictReader(open('top50.csv','r'),delimiter=','))
 # print the first five lines
 print("this list has",len(spotify_info),"items in it")
 spotify_info[9]  # the dictionary at position 9 is for bad guy by Billie Eilish
+
+
+# Printing song information
+def printSong(d):
+    print(d['title'],'---',d['artist'])
+printSong(spotify_info[9])
+
+def printSongList(ds):
+    for d in ds:
+        printSong(d)
+printSongList(spotify_info[:5])
+
+pop = [d for d in spotify_info if "pop" in d['genre']]
+printSongList(pop)
