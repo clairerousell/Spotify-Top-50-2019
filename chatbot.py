@@ -3,7 +3,7 @@ from random import choice
 computerResponses = [] # list of all computer's questions
 humanResponses = []  # list of all the person's responses
 
-def eliza():
+def spotify_helper():
     """
         simulate a Rogerian therapist
         this function asks the user questions
@@ -105,5 +105,5 @@ generalResponses = [
 
 
 if __name__=="__main__":
-    eliza()  # call eliza when run as a script
+    spotify_helper()  # call spotify_helper when run as a script
              # but not when imported
