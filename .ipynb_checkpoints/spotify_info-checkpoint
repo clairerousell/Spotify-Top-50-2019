@@ -1,0 +1,6 @@
+import csv
+spotify_info = list(csv.DictReader(open('top50.csv','r'),delimiter=','))
+
+# print the first five lines
+print("this list has",len(spotify_info),"items in it")
+spotify_info[351]  # the dictionary at position 351 is for 
