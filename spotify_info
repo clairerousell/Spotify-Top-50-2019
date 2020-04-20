@@ -17,4 +17,12 @@ def printSongList(ds):
 printSongList(spotify_info[:5])
 
 pop = [d for d in spotify_info if "pop" in d['genre']]
-printSongList(pop)
+trap = [d for d in spotify_info if "trap" in d['genre']]
+rap = [d for d in spotify_info if "rap" in d['genre']]
+hip hip = [d for d in spotify_info if "hip hop" in d['genre']]
+edm= [d for d in spotify_info if "edm" in d['genre']]
+latin = [d for d in spotify_info if "latin" in d['genre']]
+
+medium_tempo = [d for d in spotify_info if 84>d['Beats.Per.Minute']>119]
+fast_tempo= [d for d in spotify_info if 120>d['Beats.Per.Minute']>155]
+very_fast_tempo = [d for d in spotify_info if 156>d['Beats.Per.Minute']>191]

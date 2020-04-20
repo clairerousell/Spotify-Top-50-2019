@@ -5,11 +5,10 @@ humanResponses = []  # list of all the person's responses
 
 def spotify_helper():
     """
-        simulate a Rogerian therapist
-        this function asks the user questions
-        based on the answer to the previous question
+        gives a list of songs to the user based on their music taste
+        this function asks the user questions to narrow down the list
     """
-    userComment = input("Computer >> How are you feeling today?\nThe User >> ")
+    userComment = input("Computer >> How would you describe your music taste (genre, )?\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
