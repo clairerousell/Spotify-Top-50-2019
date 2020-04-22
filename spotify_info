@@ -27,7 +27,9 @@ fast_tempo= [d for d in spotify_info if 120>int(d['Beats.Per.Minute'])>155]
 very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191]
 
 # using user inputs to create the list of songs
+print("This code gives the user a playlist of songs from the Top 50 most popular songs on Spotify from 2019")
 genre=input("Which genre of music are you looking for?")
+print("Here's your playlist based on the genre you specified:")
 if "pop" in genre:
     printSongList(pop)
 if "trap" in genre:
@@ -44,3 +46,12 @@ if "hiphop" in genre:
     printSongList(hip_hop)
 else:
     print("Sorry, no song from our list is in that genre.")
+
+song_speed=input("Do you like [1] medium tempo songs, [2] fast songs, or [3] very fast songs?")
+print("Here is your playlist based on the tempo you specified:")
+if song_speed=="1":
+    printSongList(medium_tempo)
+if song_speed=="2":
+    printSongList(fast_tempo)
+if song_speed=="3":
+    printSongList(very_fast_tempo)
