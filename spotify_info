@@ -7,7 +7,7 @@ spotify_info[9]  # the dictionary at position 9 is for bad guy by Billie Eilish
 
 # Printing song information
 def printSong(d):
-    print(d['title'],'---',d['artist'])
+    print(d['Track.Name'],'---',d['Artist.Name'])
 printSong(spotify_info[9])
 
 def printSongList(ds):
@@ -15,18 +15,32 @@ def printSongList(ds):
         printSong(d)
 printSongList(spotify_info[:5])
 
-pop = [d for d in spotify_info if "pop" in d['genre']]
-trap = [d for d in spotify_info if "trap" in d['genre']]
-rap = [d for d in spotify_info if "rap" in d['genre']]
-hip hip = [d for d in spotify_info if "hip hop" in d['genre']]
-edm= [d for d in spotify_info if "edm" in d['genre']]
-latin = [d for d in spotify_info if "latin" in d['genre']]
+pop = [d for d in spotify_info if "pop" in d['Genre']]
+trap = [d for d in spotify_info if "trap" in d['Genre']]
+rap = [d for d in spotify_info if "rap" in d['Genre']]
+hip_hop = [d for d in spotify_info if "hip hop" in d['Genre']]
+edm = [d for d in spotify_info if "edm" in d['Genre']]
+latin = [d for d in spotify_info if "latin" in d['Genre']]
 
-medium_tempo = [d for d in spotify_info if 84>d['Beats.Per.Minute']>119]
-fast_tempo= [d for d in spotify_info if 120>d['Beats.Per.Minute']>155]
-very_fast_tempo = [d for d in spotify_info if 156>d['Beats.Per.Minute']>191]
+medium_tempo = [d for d in spotify_info if 84>int(d['Beats.Per.Minute'])>119]
+fast_tempo= [d for d in spotify_info if 120>int(d['Beats.Per.Minute'])>155]
+very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191]
 
 # using user inputs to create the list of songs
 genre=input("Which genre of music are you looking for?")
-
-for i in spotify info:
+if "pop" in genre:
+    printSongList(pop)
+if "trap" in genre:
+    printSongList(trap)
+if "rap" in genre:
+    printSongList(rap)
+if "latin" in genre:
+    printSongList(pop)
+if "edm" in genre:
+    printSongList(edm)
+if "hip hop" in genre:
+    printSongList(hip_hop)
+if "hiphop" in genre:
+    printSongList(hip_hop)
+else:
+    print("Sorry, no song from our list is in that genre.")
