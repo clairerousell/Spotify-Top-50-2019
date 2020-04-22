@@ -22,10 +22,10 @@ def spotify_helper():
 
 def respond(comment):
     """ generate a computer response to the user's comment"""
-    if contains(comment,sadWords):
-        return choice(sadResponses)
-    if contains(comment,madWords):
-        return choice(madResponses)
+    if contains(comment,popWords):
+        return choice(popResponses)
+    if contains(comment,artistWords):
+        return choice(artistResponses)
     if len(comment.split()) <= 2:  # respond to short answers...
         return choice(shortResponses)
     return choice(generalResponses)
