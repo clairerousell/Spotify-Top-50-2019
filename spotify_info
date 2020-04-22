@@ -26,3 +26,8 @@ latin = [d for d in spotify_info if "latin" in d['genre']]
 medium_tempo = [d for d in spotify_info if 84>d['Beats.Per.Minute']>119]
 fast_tempo= [d for d in spotify_info if 120>d['Beats.Per.Minute']>155]
 very_fast_tempo = [d for d in spotify_info if 156>d['Beats.Per.Minute']>191]
+
+# using user inputs to create the list of songs
+genre=input("Which genre of music are you looking for?")
+
+for i in spotify info:
