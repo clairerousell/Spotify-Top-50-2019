@@ -7,7 +7,7 @@ print("this list has",len(spotify_info),"items in it")
 
 # Printing song information
 def printSong(d):
-    print(d['Track.Name'],'---',d['Artist.Name'])
+    print(d['Track.Name'],'---',d['Artist.Name']) 
 ##printSong(spotify_info[9])
 
 def printSongList(ds):
@@ -47,11 +47,11 @@ if "hiphop" in genre:
 else:
     print("Sorry, no song from our list is in that genre.")
 
-#song_speed=input("Do you like [1] medium tempo songs, [2] fast songs, or [3] very fast songs?")
-#print("Here is your playlist based on the tempo you specified:")
-#if song_speed=="1":
-    #printSongList(medium_tempo)
-#if song_speed=="2":
-    #printSongList(fast_tempo)
-#if song_speed=="3":
-    #printSongList(very_fast_tempo)
+song_speed=input("Do you like [1] medium tempo songs, [2] fast songs, or [3] very fast songs?")
+print("Here is your playlist based on the tempo you specified:")
+if song_speed=="1":
+    printSongList(medium_tempo)
+if song_speed=="2":
+    printSongList(fast_tempo)
+if song_speed=="3":
+    printSongList(very_fast_tempo)
