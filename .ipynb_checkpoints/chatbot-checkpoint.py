@@ -4,6 +4,7 @@ computerResponses = [] # list of all computer's questions
 humanResponses = []  # list of all the person's responses
 
 def spotify_helper():
+    """
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
     """
