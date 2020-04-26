@@ -1,4 +1,5 @@
 import csv
+
 spotify_info = list(csv.DictReader(open('top50.csv','r'),delimiter=','))
 
 print("this list has",len(spotify_info),"items in it")
