@@ -66,8 +66,12 @@ def contains2(sentence,words):
 
 # Here are the sad keywords and responses to sad comments
 popWords = "pop".split()
-sadResponses=[
-"Here are some pop songs:"printSongList(pop)
+popResponses=[
+"Here's a pop song: Señorita by Shawn Mendes",
+"Here's a pop song: "
+
+
+
 ]
 
 rapWords = "rap".split()
