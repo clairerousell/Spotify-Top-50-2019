@@ -8,8 +8,8 @@ def spotify_helper():
     """
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
-    """
-    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs based on your music taste. Why don't you tell me what kinds of songs you're looking for? (e.g. genre, danceability, song length)\nThe User >> ")
+    """ 
+    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, danceability, song length)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
@@ -35,12 +35,12 @@ def respond(comment):
         return choice(latinResponses)
     if contains(comment,edmWords):
         return choice(edmResponses)
-    if contains(comment,danceWords):
-        return choice(danceResponses)
-    if contains(comment,lengthWords):
-        return choice(lengthResponses)
-    if contains(comment,energyWords):
-        return choice(energyResponses)
+#     if contains(comment,danceWords):
+#         return choice(danceResponses)
+#     if contains(comment,lengthWords):
+#         return choice(lengthResponses)+"What other kinds of music do you like?"
+#     if contains(comment,energyWords):
+#         return choice(energyResponses)
     return choice(otherResponses)
 
 def contains(sentence,words):
@@ -67,36 +67,35 @@ def contains2(sentence,words):
 # Here are the sad keywords and responses to sad comments
 popWords = "pop".split()
 popResponses=[
-"Here's a pop song: Señorita by Shawn Mendes",
-"Here's a pop song: "
+"Here are some pop songs:"+spotify_info.printSongList(spotify_info.pop)
 
 
 
 ]
 
 rapWords = "rap".split()
-sadResponses=[
-"Here are some rap songs:"printSongList(rap)
+rapResponses=[
+"Here are some rap songs:"+(spotify_info.printSongList(spotify_info.rap))+"\nWhat other kinds of music do you like?"
 ]
 
 hiphopWords = "hip hop hiphop".split()
 hiphopResponses=[
-"Here are some hip hop songs:"printSongList(hip_hop)
+"Here are some hip hop songs:"+(spotify_info.printSongList(spotify_info.hip_hop))+"\nWhat other kinds of music do you like?"
 ]
 
 edmWords = "edm".split()
-edResponses=[
-"Here are some edm songs:"printSongList(edm)
+edmResponses=[
+"Here are some edm songs:"+(spotify_info.printSongList(spotify_info.edm))+"\nWhat other kinds of music do you like?"
 ]
 
 trapWords = "trap".split()
 trapResponses=[
-"Here are some trap songs:"printSongList(trap)
+"Here are some trap songs:"+(spotify_info.printSongList(spotify_info.trap))+"\nWhat other kinds of music do you like?"
 ]
 
 latinWords = "latin".split()
 latinResponses=[
-"Here are some latin songs:"printSongList(latin)
+"Here are some latin songs:"+(spotify_info.printSongList(spotify_info.latin))+"\nWhat other kinds of music do you like?"
 ]
 
 

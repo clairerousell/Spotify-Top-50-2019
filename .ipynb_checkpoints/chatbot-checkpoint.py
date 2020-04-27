@@ -1,4 +1,5 @@
 from random import choice
+import spotify_info
 
 computerResponses = [] # list of all computer's questions
 humanResponses = []  # list of all the person's responses
@@ -8,7 +9,7 @@ def spotify_helper():
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
     """
-    userComment = input("Computer >> How would you describe your music taste (genre, )?\nThe User >> ")
+    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs based on your music taste. Why don't you tell me what kinds of songs you're looking for? (e.g. genre, danceability, song length)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
@@ -22,13 +23,25 @@ def spotify_helper():
 
 def respond(comment):
     """ generate a computer response to the user's comment"""
-    if contains(comment,sadWords):
-        return choice(sadResponses)
-    if contains(comment,madWords):
-        return choice(madResponses)
-    if len(comment.split()) <= 2:  # respond to short answers...
-        return choice(shortResponses)
-    return choice(generalResponses)
+    if contains(comment,popWords):
+        return choice(popResponses)
+    if contains(comment,trapWords):
+        return choice(trapResponses)
+    if contains(comment,rapWords):
+        return choice(rapResponses)
+    if contains(comment,hiphopWords):
+        return choice(hiphopResponses)
+    if contains(comment,latinWords):
+        return choice(latinResponses)
+    if contains(comment,edmWords):
+        return choice(edmResponses)
+    if contains(comment,danceWords):
+        return choice(danceResponses)
+    if contains(comment,lengthWords):
+        return choice(lengthResponses)
+    if contains(comment,energyWords):
+        return choice(energyResponses)
+    return choice(otherResponses)
 
 def contains(sentence,words):
     """ true if one of the words is in the sentence
@@ -52,54 +65,46 @@ def contains2(sentence,words):
     return False
 
 # Here are the sad keywords and responses to sad comments
-sadWords = "sad down blue depressed".split()
+popWords = "pop".split()
+popResponses=[
+"Here are some pop songs:"+spotify_info.printSongList(spotify_info.pop)
+
+
+
+]
+
+rapWords = "rap".split()
 sadResponses=[
-"Do you often feel sad?",
-"What do you do when you are feeling blue?",
-"Why do you think you are feeling down?",
-"Do you find you have a lot of negative thoughts?"
+"Here are some rap songs:"+(spotify_info.printSongList(spotify_info.rap))
 ]
 
-
-# Here are the mad keywords and response to comments containing a mad keyword
-madWords = "mad shutup angry upset hate anger wrath hatred delirium despicable,".split()
-madResponses = [
-  "calm down",
-  "Why are you feeling this way?",
-  "How long have you been feeling this way?",
-  "Are you experiencing any conflicts in your life right now?",
-  "i am listening, what makes you angry",
-  "lifes good, dude",
-  "what is frustrating you?"
+hiphopWords = "hip hop hiphop".split()
+hiphopResponses=[
+"Here are some hip hop songs:"+(spotify_info.printSongList(spotify_info.hip_hop))
 ]
 
-# these are the possible responses to short comments
-# like "yes" or "no" or "idk"
-shortResponses = [
-    "Could you please elaborate?",
-    "Would you mind elaborating?",
-    "What else?",
-    "Anything more to say?",
-    "Don't hold back on the words, brethren!",
-    "Tell me more good person",
-    "Fine. Tell me more about yourself.",
-    "WHY ARE YOU BEING SO SHORT WITH ME!!!!"
+edmWords = "edm".split()
+edResponses=[
+"Here are some edm songs:"+(spotify_info.printSongList(spotify_info.edm))
 ]
+
+trapWords = "trap".split()
+trapResponses=[
+"Here are some trap songs:"+(spotify_info.printSongList(spotify_info.trap))
+]
+
+latinWords = "latin".split()
+latinResponses=[
+"Here are some latin songs:"+(spotify_info.printSongList(spotify_info.latin))
+]
+
 
 # We give these responses if there is nothing else to say!
 generalResponses = [
-  "Hmmm. Tell me more.",
-  "Do you have a lot of negative thoughts?",
-  "Tell me about your relationship with your mother?",
-  "How do you get along with your father?",
-  "How do you feel about your performance in school?",
-  "Do you often feel this way?",
-  "How is your relationship with your mother?",
-  "When was the last time you laughed out loud?",
-  "Is there anyone you can confide in?",
-  "Tell me about the last time you got mad.",
-  "Tell me about the last time you were very sad.",
-  "Do you ever feel ashamed about something you've done?",
+  "What genre of music is your favorite?.",
+  "Do you mainly listen to short songs or long songs?",
+  "Do you like your music to be high ir low energy?",
+  "What genre of music would you like to listen to?"
 ]
 
 
