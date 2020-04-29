@@ -9,7 +9,7 @@ def spotify_helper():
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
     """
-    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, danceability, song length)\nThe User >> ")
+    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, tempo, song length)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
@@ -29,6 +29,10 @@ def respond(comment):
         return choice(shortResponses)
     if contains(comment,longWords):
         return choice(longResponses)
+    if contains(comment,mediumWords):
+        return choice(mediumResponses)
+    if contains(comment,fastWords):
+        return choice(fastResponses)
     if contains(comment,trapWords):
         return choice(trapResponses)
     if contains(comment,rapWords):
@@ -105,6 +109,15 @@ longResponses=[
 "Here are some long songs:"+(spotify_info.printSongList(spotify_info.long_length))+"\nWhat other kinds of music do you like?"
 ]
 
+mediumWords = "medium Medium".split()
+mediumResponses=[
+"Here are some medium tempo songs:"+(spotify_info.printSongList(spotify_info.medium_tempo))+"\nWhat other kinds of music do you like?"
+]
+
+fastWords = "fast Fast".split()
+fastResponses=[
+"Here are some fast songs:"+(spotify_info.printSongList(spotify_info.fast_tempo))+"\nWhat other kinds of music do you like?"
+]
 
 generalResponses = [
   "What genre of music is your favorite?",

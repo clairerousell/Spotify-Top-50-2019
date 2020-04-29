@@ -26,9 +26,6 @@ hip_hop = [d for d in spotify_info if "hip hop" in d['Genre']]
 edm = [d for d in spotify_info if "edm" in d['Genre']]
 latin = [d for d in spotify_info if "latin" in d['Genre']]
 
-medium_tempo = [d for d in spotify_info if 84>int(d['Beats.Per.Minute'])>119]
-fast_tempo= [d for d in spotify_info if 120>int(d['Beats.Per.Minute'])>155]
-very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191]
 
 # using user inputs to create the list of songs
 #print("This code gives the user a playlist of songs from the Top 50 most popular songs on Spotify from 2019")
@@ -57,8 +54,6 @@ very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191
     #printSongList(medium_tempo)
 #if song_speed=="2":
     #printSongList(fast_tempo)
-#if song_speed=="3":
-    #printSongList(very_fast_tempo)
 
 # def song_length(length):
 #     length = input("Do you want short, medium, or long songs? The songs range from 115-309 seconds"))
@@ -66,6 +61,8 @@ very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191
 # medium_length= [d for d in spotify_info if >int(d['Length.'])<181 and int(d['Length.'])>244]
 # long_length = [d for d in spotify_info if int(d['Length.'])<245 and int(d['Length.'])>309]
 
+medium_tempo = [d for d in spotify_info if int(d['Beats.Per.Minute'])<130]
+fast_tempo= [d for d in spotify_info if 134<int(d['Beats.Per.Minute'])]
 
 
 short_length = [d for d in spotify_info if int(d['Length.'])<175]
