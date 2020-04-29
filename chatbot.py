@@ -8,7 +8,7 @@ def spotify_helper():
     """
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
-    """ 
+    """
     userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, danceability, song length)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
@@ -99,6 +99,7 @@ latinResponses=[
 ]
 
 
+
 # We give these responses if there is nothing else to say!
 generalResponses = [
   "What genre of music is your favorite?.",
@@ -106,7 +107,6 @@ generalResponses = [
   "Do you like your music to be high ir low energy?",
   "What genre of music would you like to listen to?"
 ]
-
 
 if __name__=="__main__":
     spotify_helper()  # call spotify_helper when run as a script

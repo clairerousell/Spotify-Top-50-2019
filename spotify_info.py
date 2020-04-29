@@ -59,3 +59,10 @@ very_fast_tempo = [d for d in spotify_info if 156>int(d['Beats.Per.Minute'])>191
     #printSongList(fast_tempo)
 #if song_speed=="3":
     #printSongList(very_fast_tempo)
+
+def song_length(length):
+    length = input("Do you want short, medium, or long songs? The songs range from 115-309 seconds"))
+
+    short_length = [d for d in spotify_info if 115>int(d['Length'])>180]
+    medium_length= [d for d in spotify_info if 180>int(d['Length'])>244]
+    long_length = [d for d in spotify_info if 244>int(d['Length'])>309]
