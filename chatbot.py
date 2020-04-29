@@ -25,6 +25,10 @@ def respond(comment):
     """ generate a computer response to the user's comment"""
     if contains(comment,popWords):
         return choice(popResponses)
+    if contains(comment,shortWords):
+        return choice(shortResponses)
+    if contains(comment,longWords):
+        return choice(longResponses)
     if contains(comment,trapWords):
         return choice(trapResponses)
     if contains(comment,rapWords):
@@ -35,13 +39,7 @@ def respond(comment):
         return choice(latinResponses)
     if contains(comment,edmWords):
         return choice(edmResponses)
-#     if contains(comment,danceWords):
-#         return choice(danceResponses)
-#     if contains(comment,lengthWords):
-#         return choice(lengthResponses)+"What other kinds of music do you like?"
-#     if contains(comment,energyWords):
-#         return choice(energyResponses)
-    return choice(otherResponses)
+    return choice(generalResponses)
 
 def contains(sentence,words):
     """ true if one of the words is in the sentence
@@ -65,47 +63,54 @@ def contains2(sentence,words):
     return False
 
 # Here are the sad keywords and responses to sad comments
-popWords = "pop".split()
+popWords = "pop Pop".split()
 popResponses=[
-"Here are some pop songs:"+spotify_info.printSongList(spotify_info.pop)
-
-
-
+"Here are some pop songs:"+(spotify_info.printSongList(spotify_info.pop))+"\nWhat other kinds of music do you like?"
 ]
 
-rapWords = "rap".split()
+rapWords = "rap Rap".split()
 rapResponses=[
 "Here are some rap songs:"+(spotify_info.printSongList(spotify_info.rap))+"\nWhat other kinds of music do you like?"
 ]
 
-hiphopWords = "hip hop hiphop".split()
+hiphopWords = "hip hop hiphop Hip Hop Hiphop".split()
 hiphopResponses=[
 "Here are some hip hop songs:"+(spotify_info.printSongList(spotify_info.hip_hop))+"\nWhat other kinds of music do you like?"
 ]
 
-edmWords = "edm".split()
+edmWords = "edm EDM Edm".split()
 edmResponses=[
 "Here are some edm songs:"+(spotify_info.printSongList(spotify_info.edm))+"\nWhat other kinds of music do you like?"
 ]
 
-trapWords = "trap".split()
+trapWords = "trap Trap".split()
 trapResponses=[
 "Here are some trap songs:"+(spotify_info.printSongList(spotify_info.trap))+"\nWhat other kinds of music do you like?"
 ]
 
-latinWords = "latin".split()
+latinWords = "latin Latin".split()
 latinResponses=[
 "Here are some latin songs:"+(spotify_info.printSongList(spotify_info.latin))+"\nWhat other kinds of music do you like?"
 ]
 
 
+shortWords = "short Short".split()
+shortResponses=[
+"Here are some short songs:"+(spotify_info.printSongList(spotify_info.short_length))+"\nWhat other kinds of music do you like?"
+]
 
-# We give these responses if there is nothing else to say!
+
+longWords = "long Long".split()
+longResponses=[
+"Here are some long songs:"+(spotify_info.printSongList(spotify_info.long_length))+"\nWhat other kinds of music do you like?"
+]
+
+
 generalResponses = [
-  "What genre of music is your favorite?.",
+  "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
-  "Do you like your music to be high ir low energy?",
-  "What genre of music would you like to listen to?"
+  "What genre of music would you like to listen to?",
+  "Do you like short songs or long songs?"
 ]
 
 if __name__=="__main__":
