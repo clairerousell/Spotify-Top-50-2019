@@ -9,7 +9,7 @@ def spotify_helper():
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
     """
-    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, tempo, song length)\nThe User >> ")
+    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, tempo, song length, valence, speechiness)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
@@ -37,6 +37,14 @@ def respond(comment):
         return choice(trapResponses)
     if contains(comment,rapWords):
         return choice(rapResponses)
+    if contains(comment,positiveWords):
+        return choice(positiveResponses)
+    if contains(comment,musicalWords):
+        return choice(musicalResponses)
+    if contains(comment,spokenWords):
+        return choice(spokenResponses)
+    if contains(comment,negativeWords):
+        return choice(negativeResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
@@ -119,11 +127,37 @@ fastResponses=[
 "Here are some fast songs:"+(spotify_info.printSongList(spotify_info.fast_tempo))+"\nWhat other kinds of music do you like?"
 ]
 
+positiveWords = "positive happy optimistic".split()
+positiveResponses=[
+"Here are some songs with high valence (a more positive and happy mood):"+(spotify_info.printSongList(spotify_info.high_valence))+"\nWhat other kinds of music do you like?"
+]
+
+negativeWords = "negative sad pessimistic".split()
+negativeResponses=[
+"Here are some songs with low valence (a more negative and sad mood):"+(spotify_info.printSongList(spotify_info.low_valence))+"\nWhat other kinds of music do you like?"
+]
+
+spokenWords = "spoken speech speak".split()
+spokenResponses=[
+"Here are some songs with high speechiness (songs that include more spoken word):"+(spotify_info.printSongList(spotify_info.high_speechiness))+"\nWhat other kinds of music do you like?"
+]
+
+musicalWords = "sung musical".split()
+musicalResponses=[
+"Here are some songs with low speechiness (songs that include less spoken word):"+(spotify_info.printSongList(spotify_info.low_speechiness))+"\nWhat other kinds of music do you like?"
+]
+
+
+
+
 generalResponses = [
   "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
   "What genre of music would you like to listen to?",
-  "Do you like short songs or long songs?"
+  "Do you like short songs or long songs?",
+  "Do you prefer songs with a positive or negative mood?",
+  "Do you like songs with spoken word or with more of a musical quality?",
+  "Do you like songs where the words are more often sung or spoken?"
 ]
 
 if __name__=="__main__":
