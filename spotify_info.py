@@ -69,9 +69,9 @@ short_length = [d for d in spotify_info if int(d['Length.'])<175]
 long_length = [d for d in spotify_info if 176<int(d['Length.'])]
 
 
-low_speachiness = [d for d in spotify_info if int(d['Spechiness'])<=23]
-high_speachiness = [d for d in spotify_info if 46<=int(d['Speachiness'])]
-
-
-low_valence = [d for d in spotify_info if int(d['Valence'])=<48]
-high_valence = [d for d in spotify_info if <=95int(d['Valence'])]
+# low_speachiness = [d for d in spotify_info if int(d['Spechiness'])<24]
+# high_speachiness = [d for d in spotify_info if 47<int(d['Speachiness'])]
+#
+#
+# low_valence = [d for d in spotify_info if int(d['Valence'])<49]
+# high_valence = [d for d in spotify_info if 95<int(d['Valence'])]
