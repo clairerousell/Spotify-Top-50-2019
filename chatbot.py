@@ -206,16 +206,13 @@ lessAcousticResponses =[
 ]
 
 
+import hyperlink
 url = hyperlink.parse(u'https://open.spotify.com/playlist/452xDxHeGps1mqg6j0MmOz')
+secure_url = url.replace(scheme=u'https')
 
-better_url = url.replace(scheme=u'https', port=443)
-org_url = better_url.click(u'.')
-
-print(org_url.to_text())
-
-playlistWords = "playlist".split()
+playlistWords = "playlist url link".split()
 playlistResponses =[
-"Here's a link to a playlist with all these songs:\n"+(org_url.to_text())
+"Here's a link to a playlist with all these songs:\n"+(secure_url.to_text())
 ]
 
 generalResponses = [
