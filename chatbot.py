@@ -57,6 +57,10 @@ def respond(comment):
         return choice(danceResponses)
     if contains (comment,relaxingWords):
         return choice(relaxingResponses)
+    if contains (comment,acousticWords):
+        return choice(acousticResponses)
+    if contains (comment,lessacousticnessWords):
+        return choice(lessacousticnessResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
@@ -189,6 +193,15 @@ relaxingResponses =[
 "Here are more relaxing songs unwind:"+(spotify_info.printSongList(spotify_info.low_danceability))+"\nWhat other kinds of music do you like?"
 ]
 
+acousticWords = "acoustic instrumental".split()
+acousticResponses =[
+"Here are some songs with high acousticness:"+(spotify_info.printSongList(spotify_info.high_acousticness))+"\nWhat other kinds of music do you like?"
+]
+
+lessacousticWords = "electronic electric".split()
+lessAcousticResponses =[(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
+]
+
 generalResponses = [
   "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
@@ -200,7 +213,7 @@ generalResponses = [
   "Do you prefer to listen to more energetic or calmer music?"
   "Does your playlist consist more of popular or lesser known songs? Do you prefer one or the other?",
   "Do you want to listen to songs you can dance or unwind to?"
-
+  "Do you prefer music that is acoustic or not acoustic?"
 ]
 
 if __name__=="__main__":
