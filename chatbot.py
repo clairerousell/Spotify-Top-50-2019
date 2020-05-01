@@ -93,44 +93,44 @@ def contains2(sentence,words):
 # Here are the sad keywords and responses to sad comments
 popWords = "pop Pop".split()
 popResponses=[
-"Here are some pop songs:"+(spotify_info.printSongList(spotify_info.pop))+"\nWhat other kinds of music do you like?"
+"Here are some pop songs:\n"+(spotify_info.printSongList(spotify_info.pop))+"\nWhat other kinds of music do you like?"
 ]
 
 rapWords = "rap Rap".split()
 rapResponses=[
-"Here are some rap songs:"+(spotify_info.printSongList(spotify_info.rap))+"\nWhat other kinds of music do you like?"
+"Here are some rap songs:\n"+(spotify_info.printSongList(spotify_info.rap))+"\nWhat other kinds of music do you like?"
 ]
 
 hiphopWords = "hip hop hiphop Hip Hop Hiphop".split()
 hiphopResponses=[
-"Here are some hip hop songs:"+(spotify_info.printSongList(spotify_info.hip_hop))+"\nWhat other kinds of music do you like?"
+"Here are some hip hop songs:\n"+(spotify_info.printSongList(spotify_info.hip_hop))+"\nWhat other kinds of music do you like?"
 ]
 
 edmWords = "edm EDM Edm".split()
 edmResponses=[
-"Here are some edm songs:"+(spotify_info.printSongList(spotify_info.edm))+"\nWhat other kinds of music do you like?"
+"Here are some edm songs:\n"+(spotify_info.printSongList(spotify_info.edm))+"\nWhat other kinds of music do you like?"
 ]
 
 trapWords = "trap Trap".split()
 trapResponses=[
-"Here are some trap songs:"+(spotify_info.printSongList(spotify_info.trap))+"\nWhat other kinds of music do you like?"
+"Here are some trap songs:\n"+(spotify_info.printSongList(spotify_info.trap))+"\nWhat other kinds of music do you like?"
 ]
 
 latinWords = "latin Latin".split()
 latinResponses=[
-"Here are some latin songs:"+(spotify_info.printSongList(spotify_info.latin))+"\nWhat other kinds of music do you like?"
+"Here are some latin songs:\n"+(spotify_info.printSongList(spotify_info.latin))+"\nWhat other kinds of music do you like?"
 ]
 
 
 shortWords = "short Short".split()
 shortResponses=[
-"Here are some short songs:"+(spotify_info.printSongList(spotify_info.short_length))+"\nWhat other kinds of music do you like?"
+"Here are some short songs:\n"+(spotify_info.printSongList(spotify_info.short_length))+"\nWhat other kinds of music do you like?"
 ]
 
 
 longWords = "long Long".split()
 longResponses=[
-"Here are some long songs:"+(spotify_info.printSongList(spotify_info.long_length))+"\nWhat other kinds of music do you like?"
+"Here are some long songs:\n"+(spotify_info.printSongList(spotify_info.long_length))+"\nWhat other kinds of music do you like?"
 ]
 
 mediumWords = "medium Medium".split()
@@ -140,12 +140,12 @@ mediumResponses=[
 
 fastWords = "fast Fast".split()
 fastResponses=[
-"Here are some fast songs:"+(spotify_info.printSongList(spotify_info.fast_tempo))+"\nWhat other kinds of music do you like?"
+"Here are some fast songs:\n"+(spotify_info.printSongList(spotify_info.fast_tempo))+"\nWhat other kinds of music do you like?"
 ]
 
 positiveWords = "positive happy optimistic".split()
 positiveResponses=[
-"Here are some songs with high valence (a more positive and happy mood):"+(spotify_info.printSongList(spotify_info.high_valence))+"\nWhat other kinds of music do you like?"
+"Here are some songs with high valence (a more positive and happy mood):\n"+(spotify_info.printSongList(spotify_info.high_valence))+"\nWhat other kinds of music do you like?"
 ]
 
 negativeWords = "negative sad pessimistic".split()
@@ -153,54 +153,54 @@ negativeResponses=[
 "Here are some songs with low valence (a more negative and sad mood):"+(spotify_info.printSongList(spotify_info.low_valence))+"\nWhat other kinds of music do you like?"
 ]
 
-# spokenWords = "spoken speech speak".split()
-# spokenResponses=[
-# "Here are some songs with high speechiness (songs that include more spoken word):"+(spotify_info.printSongList(spotify_info.high_speechiness))+"\nWhat other kinds of music do you like?"
-# ]
+spokenWords = "spoken speech speak".split()
+spokenResponses=[
+"Here are some songs with high speechiness (songs that include more spoken word):\n"+(spotify_info.printSongList(spotify_info.high_speechiness))+"\nWhat other kinds of music do you like?"
+]
 
 musicalWords = "sung musical".split()
 musicalResponses=[
-"Here are some songs with low speechiness (songs that include less spoken word):"+(spotify_info.printSongList(spotify_info.low_speechiness))+"\nWhat other kinds of music do you like?"
+"Here are some songs with low speechiness (songs that include less spoken word)\n:"+(spotify_info.printSongList(spotify_info.low_speechiness))+"\nWhat other kinds of music do you like?"
 ]
 
 lowenergyWords = "low slow quiet calm serene calming".split()
 lowenergyResponses =[
-"Here are some songs with low energy:"+(spotify_info.printSongList(spotify_info.low_energy))+"\nWhat other kinds of music do you like?"
+"Here are some songs with low energy:\n"+(spotify_info.printSongList(spotify_info.low_energy))+"\nWhat other kinds of music do you like?"
 ]
 
 highenergyWords = "intense active fast loud noisy".split()
 highenergyResponses =[
-"Here are some songs with high energy:"+(spotify_info.printSongList(spotify_info.high_energy))+"\nWhat other kinds of music do you like?"
+"Here are some songs with high energy:\n"+(spotify_info.printSongList(spotify_info.high_energy))+"\nWhat other kinds of music do you like?"
 ]
 
 unpopularWords = "unheard underground unknown lesser known underplayed".split()
 unpopularResponses =[
-"Here are some lesser known songs:"+(spotify_info.printSongList(spotify_info.low_popularity))+"\nWhat other kinds of music do you like?"
+"Here are some lesser known songs:\n"+(spotify_info.printSongList(spotify_info.low_popularity))+"\nWhat other kinds of music do you like?"
 ]
 
 popularWords = "popular famous trendy catchy".split()
 popularResponses =[
-"Here are some really popular songs:"+(spotify_info.printSongList(spotify_info.high_popularity))+"\nWhat other kinds of music do you like?"
+"Here are some really popular songs:\n"+(spotify_info.printSongList(spotify_info.high_popularity))+"\nWhat other kinds of music do you like?"
 ]
 
 danceWords = "dance party fun danceable dancing rhythm rhytmic".split()
 danceResponses =[
-"Here are some songs that are easy to dance to:"+(spotify_info.printSongList(spotify_info.high_danceability))+"\nWhat other kinds of music do you like?"
+"Here are some songs that are easy to dance to:\n"+(spotify_info.printSongList(spotify_info.high_danceability))+"\nWhat other kinds of music do you like?"
 ]
 
 relaxingWords = "relax relaxing chill".split()
 relaxingResponses =[
-"Here are more relaxing songs unwind:"+(spotify_info.printSongList(spotify_info.low_danceability))+"\nWhat other kinds of music do you like?"
+"Here are more relaxing songs unwind:\n"+(spotify_info.printSongList(spotify_info.low_danceability))+"\nWhat other kinds of music do you like?"
 ]
 
 acousticWords = "acoustic instrumental".split()
 acousticResponses =[
-"Here are some songs with high acousticness:"+(spotify_info.printSongList(spotify_info.high_acousticness))+"\nWhat other kinds of music do you like?"
+"Here are some songs with high acousticness:\n"+(spotify_info.printSongList(spotify_info.high_acousticness))+"\nWhat other kinds of music do you like?"
 ]
 
 lessacousticWords = "electronic electric".split()
 lessAcousticResponses =[
-"Here are some songs with high acousticness:"+(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
+"Here are some songs with high acousticness:\n"+(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
 ]
 
 generalResponses = [
