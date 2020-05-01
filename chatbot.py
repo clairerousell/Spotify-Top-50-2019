@@ -53,6 +53,10 @@ def respond(comment):
         return choice(popularResponses)
     if contains (comment,unpopularWords):
         return choice(unpopularResponses)
+    if contains (comment,danceWords):
+        return choice(danceResponses)
+    if contains (comment,relaxingWords):
+        return choice(relaxingResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
