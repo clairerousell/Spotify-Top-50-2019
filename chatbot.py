@@ -170,6 +170,7 @@ generalResponses = [
   "Do you like songs with spoken word or with more of a musical quality?",
   "Do you like songs where the words are more often sung or spoken?",
   "Do you prefer to listen to more energetic or calmer music?"
+  "Does your playlist consist more of popular or lesser known songs? Do you prefer one or the other?"
 ]
 
 if __name__=="__main__":
