@@ -161,6 +161,16 @@ highenergyResponses =[
 "Here are some songs with high energy:"+(spotify_info.printSongList(spotify_info.high_energy))+"\nWhat other kinds of music do you like?"
 ]
 
+unpopularWords = "unheard underground unknown lesser known underplayed".split()
+unpopularResponses =[
+"Here are some lesser known songs:"+(spotify_info.printSongList(spotify_info.low_popularity))+"\nWhat other kinds of music do you like?"
+]
+
+popularWords = "popular famous trendy catchy".split()
+popularResponses =[
+"Here are some really popular songs:"+(spotify_info.printSongList(spotify_info.high_popularity))+"\nWhat other kinds of music do you like?"
+]
+
 generalResponses = [
   "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
