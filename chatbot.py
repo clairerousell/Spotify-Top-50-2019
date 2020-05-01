@@ -45,6 +45,10 @@ def respond(comment):
         return choice(spokenResponses)
     if contains(comment,negativeWords):
         return choice(negativeResponses)
+    if contains (comment,lowenergyWords):
+        return choice(lowenergyResponses)
+    if contains (comment,highenergyWords):
+        return choice(highenergyResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
