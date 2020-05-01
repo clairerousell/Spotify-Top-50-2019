@@ -175,6 +175,16 @@ popularResponses =[
 "Here are some really popular songs:"+(spotify_info.printSongList(spotify_info.high_popularity))+"\nWhat other kinds of music do you like?"
 ]
 
+danceWords = "dance party fun danceable dancing rhythm rhytmic".split()
+danceResponses =[
+"Here are some songs that are easy to dance to:"(spotify_info.printSongList(spotify_info.high_danceability))+"\nWhat other kinds of music do you like?"
+]
+
+relaxingWords = "relax relaxing chill".split()
+relaxingResponses =[ 
+"Here are more relaxing songs unwind:"+(spotify_info.printSongList(spotify_info.low_danceability))+"\nWhat other kinds of music do you like?"
+]
+
 generalResponses = [
   "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
@@ -184,7 +194,9 @@ generalResponses = [
   "Do you like songs with spoken word or with more of a musical quality?",
   "Do you like songs where the words are more often sung or spoken?",
   "Do you prefer to listen to more energetic or calmer music?"
-  "Does your playlist consist more of popular or lesser known songs? Do you prefer one or the other?"
+  "Does your playlist consist more of popular or lesser known songs? Do you prefer one or the other?",
+  "Do you want to listen to songs you can dance or unwind to?"
+
 ]
 
 if __name__=="__main__":
