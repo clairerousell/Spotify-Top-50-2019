@@ -67,6 +67,8 @@ def respond(comment):
         return choice(latinResponses)
     if contains(comment,edmWords):
         return choice(edmResponses)
+    if contains (comment,playlistWords):
+        return choice(playlistResponses)
     return choice(generalResponses)
 
 def contains(sentence,words):
@@ -203,6 +205,19 @@ lessAcousticResponses =[
 "Here are some songs with high acousticness:\n"+(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
 ]
 
+
+url = hyperlink.parse(u'https://open.spotify.com/playlist/452xDxHeGps1mqg6j0MmOz')
+
+better_url = url.replace(scheme=u'https', port=443)
+org_url = better_url.click(u'.')
+
+print(org_url.to_text())
+
+playlistWords = "playlist".split()
+playlistResponses =[
+"Here's a link to a playlist with all these songs:\n"+(org_url.to_text())
+]
+
 generalResponses = [
   "What genre of music is your favorite?",
   "Do you mainly listen to short songs or long songs?",
@@ -213,7 +228,8 @@ generalResponses = [
   "Do you prefer to listen to more popular or lesser known songs?",
   "Do you prefer music that is acoustic or not acoustic?",
   "Do you like songs where the words are more often sung or spoken?",
-  "Do you want to listen to songs you can dance or unwind to?"
+  "Do you want to listen to songs you can dance or unwind to?",
+  "If you would like a link to this playlist, just tell me"
 
 ]
 
