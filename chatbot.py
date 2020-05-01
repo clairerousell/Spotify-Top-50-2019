@@ -49,6 +49,10 @@ def respond(comment):
         return choice(lowenergyResponses)
     if contains (comment,highenergyWords):
         return choice(highenergyResponses)
+    if contains (comment,popularWords):
+        return choice(popularResponses)
+    if contains (comment,unpopularWords):
+        return choice(unpopularResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
