@@ -59,8 +59,8 @@ def respond(comment):
         return choice(relaxingResponses)
     if contains (comment,acousticWords):
         return choice(acousticResponses)
-    if contains (comment,lessacousticnessWords):
-        return choice(lessacousticnessResponses)
+    if contains (comment,lessacousticWords):
+        return choice(lessacousticResponses)
     if contains(comment,hiphopWords):
         return choice(hiphopResponses)
     if contains(comment,latinWords):
@@ -153,10 +153,10 @@ negativeResponses=[
 "Here are some songs with low valence (a more negative and sad mood):"+(spotify_info.printSongList(spotify_info.low_valence))+"\nWhat other kinds of music do you like?"
 ]
 
-spokenWords = "spoken speech speak".split()
-spokenResponses=[
-"Here are some songs with high speechiness (songs that include more spoken word):"+(spotify_info.printSongList(spotify_info.high_speechiness))+"\nWhat other kinds of music do you like?"
-]
+# spokenWords = "spoken speech speak".split()
+# spokenResponses=[
+# "Here are some songs with high speechiness (songs that include more spoken word):"+(spotify_info.printSongList(spotify_info.high_speechiness))+"\nWhat other kinds of music do you like?"
+# ]
 
 musicalWords = "sung musical".split()
 musicalResponses=[
@@ -168,7 +168,7 @@ lowenergyResponses =[
 "Here are some songs with low energy:"+(spotify_info.printSongList(spotify_info.low_energy))+"\nWhat other kinds of music do you like?"
 ]
 
-higheneryWords = "intense active fast loud noisy".split()
+highenergyWords = "intense active fast loud noisy".split()
 highenergyResponses =[
 "Here are some songs with high energy:"+(spotify_info.printSongList(spotify_info.high_energy))+"\nWhat other kinds of music do you like?"
 ]
@@ -185,11 +185,11 @@ popularResponses =[
 
 danceWords = "dance party fun danceable dancing rhythm rhytmic".split()
 danceResponses =[
-"Here are some songs that are easy to dance to:"(spotify_info.printSongList(spotify_info.high_danceability))+"\nWhat other kinds of music do you like?"
+"Here are some songs that are easy to dance to:"+(spotify_info.printSongList(spotify_info.high_danceability))+"\nWhat other kinds of music do you like?"
 ]
 
 relaxingWords = "relax relaxing chill".split()
-relaxingResponses =[ 
+relaxingResponses =[
 "Here are more relaxing songs unwind:"+(spotify_info.printSongList(spotify_info.low_danceability))+"\nWhat other kinds of music do you like?"
 ]
 
@@ -199,7 +199,8 @@ acousticResponses =[
 ]
 
 lessacousticWords = "electronic electric".split()
-lessAcousticResponses =[(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
+lessAcousticResponses =[
+"Here are some songs with high acousticness:"+(spotify_info.printSongList(spotify_info.low_acousticness))+"\nWhat other kinds of music do you like?"
 ]
 
 generalResponses = [
@@ -209,12 +210,14 @@ generalResponses = [
   "Do you like short songs or long songs?",
   "Do you prefer songs with a positive or negative mood?",
   "Do you like songs with spoken word or with more of a musical quality?",
+  "Do you prefer to listen to more energetic or calmer music?",
+  "Do you prefer to listen to more popular or lesser known songs?",
+  "Do you prefer music that is acoustic or not acoustic?",
   "Do you like songs where the words are more often sung or spoken?",
-  "Do you prefer to listen to more energetic or calmer music?"
-  "Does your playlist consist more of popular or lesser known songs? Do you prefer one or the other?",
   "Do you want to listen to songs you can dance or unwind to?"
-  "Do you prefer music that is acoustic or not acoustic?"
+
 ]
+
 
 if __name__=="__main__":
     spotify_helper()  # call spotify_helper when run as a script

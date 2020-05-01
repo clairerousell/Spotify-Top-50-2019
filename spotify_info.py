@@ -77,8 +77,8 @@ low_valence = [d for d in spotify_info if int(d['Valence.'])<49]
 high_valence = [d for d in spotify_info if 95<int(d['Valence.'])]
 
 
-low_acousticness = [d for d in spotify_info if int(d['Acousticness'])<16]
-high_acousticness = [d for d in spotify_info if 76<int(d['Acousticness'])]
+low_acousticness = [d for d in spotify_info if int(d['Acousticness..'])<16]
+high_acousticness = [d for d in spotify_info if 76<int(d['Acousticness..'])]
 
 
 low_energy = [d for d in spotify_info if int(d['Energy'])<65]
@@ -90,7 +90,7 @@ high_popularity = [d for d in spotify_info if 96<int(d['Popularity'])]
 
 
 low_danceability = [d for d in spotify_info if int(d['Danceability'])<71]
-high_danceability = [d for d in spotify_info if 91<int(d['Danceability'])]
+high_danceability = [d for d in spotify_info if 80<int(d['Danceability'])]
 
 
 low_loudness = [d for d in spotify_info if int(d['Loudness..dB..'])<-5]
