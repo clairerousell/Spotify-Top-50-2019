@@ -147,8 +147,15 @@ musicalResponses=[
 "Here are some songs with low speechiness (songs that include less spoken word):"+(spotify_info.printSongList(spotify_info.low_speechiness))+"\nWhat other kinds of music do you like?"
 ]
 
+lowenergyWords = "low slow quiet calm serene calming".split()
+lowenergyResponses =[
+"Here are some songs with low energy:"+(spotify_info.printSongList(spotify_info.low_energy))+"\nWhat other kinds of music do you like?"
+]
 
-
+higheneryWords = "intense active fast loud noisy".split()
+highenergyResponses =[
+"Here are some songs with high energy:"+(spotify_info.printSongList(spotify_info.high_energy))+"\nWhat other kinds of music do you like?"
+]
 
 generalResponses = [
   "What genre of music is your favorite?",
@@ -157,7 +164,8 @@ generalResponses = [
   "Do you like short songs or long songs?",
   "Do you prefer songs with a positive or negative mood?",
   "Do you like songs with spoken word or with more of a musical quality?",
-  "Do you like songs where the words are more often sung or spoken?"
+  "Do you like songs where the words are more often sung or spoken?",
+  "Do you prefer to listen to more energetic or calmer music?"
 ]
 
 if __name__=="__main__":
