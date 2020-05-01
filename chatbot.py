@@ -9,7 +9,7 @@ def spotify_helper():
         gives a list of songs to the user based on their music taste
         this function asks the user questions to narrow down the list
     """
-    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, tempo, song length, valence, speechiness)\nThe User >> ")
+    userComment = input("Computer >> Hello! I am a chatbot that will recommend you songs \n based on your music taste. Why don't you tell me what kinds \n of songs you're looking for? (e.g. genre, tempo, song length, valence, speechiness, acousticness, danceability, energy, etc.)\nThe User >> ")
 
     while userComment not in ["goodbye","bye","quit","exit"]:
         humanResponses.append(userComment)
@@ -210,9 +210,9 @@ import hyperlink
 url = hyperlink.parse(u'https://open.spotify.com/playlist/452xDxHeGps1mqg6j0MmOz')
 secure_url = url.replace(scheme=u'https')
 
-playlistWords = "playlist url link".split()
+playlistWords = "playlist url link spotify".split()
 playlistResponses =[
-"Here's a link to a playlist with all these songs:\n"+(secure_url.to_text())
+"Here's a link to a playlist of all these songs:\n"+(secure_url.to_text())
 ]
 
 generalResponses = [
@@ -226,7 +226,7 @@ generalResponses = [
   "Do you prefer music that is acoustic or not acoustic?",
   "Do you like songs where the words are more often sung or spoken?",
   "Do you want to listen to songs you can dance or unwind to?",
-  "If you would like a link to this playlist, just tell me"
+  "If you would like a link to this playlist, let me know!"
 
 ]
 
